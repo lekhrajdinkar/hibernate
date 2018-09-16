@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:ng6</property>
+        <property name="connection.username">system</property>
+        <property name="connection.password">system</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+		
+		<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+
+    </session-factory>
+
+</hibernate-configuration>
+
+<!-- 
+1. hbm2ddl.auto > create : it drops and recreates the entire schema(not just few tables).
+hbm2ddl.auto > update : it updates changes in schema if found.
+
+2. No need to define @embedded class in mapping section.
+3. Hiberante creates table all mappings entries.
+4. number, char, float > bydefault of not null - tbl creation script.
+
+ -->
