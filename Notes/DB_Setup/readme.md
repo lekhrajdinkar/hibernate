@@ -43,7 +43,7 @@ URL ng6(aws), aws-rds-oracle-db-1 : jdbc:oracle:thin:@aws-rds-oracle-db-1.cvhmhf
 2. Connect with client
 
 2.1. SQL developer
-![Oracle.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/DB_Setup/aws_db_1.PNG)
+![Oracle.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/DB_Setup/aws_db-1.PNG)
 
 2.2. Dbeaver
 ![Oracle.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/DB_Setup/connected-to-aws-client-1.PNG)

@@ -3,7 +3,8 @@
   <groupId>com.lekhraj.hibernate</groupId>
   <artifactId>hibernate</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <!-- Add Spring Web and MVC dependencies -->
+  
+  <!-- 1. Add Spring Web and MVC dependencies -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -15,6 +16,7 @@
 			<artifactId>spring-web</artifactId>
 			<version>4.3.9.RELEASE</version>
 		</dependency>
+		
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -56,6 +58,13 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+        
+    <!-- 2. Added Hibernate   -->
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>5.0.2.Final</version>
+	</dependency>
         
 	</dependencies>
 

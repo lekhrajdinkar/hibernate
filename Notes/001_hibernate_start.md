@@ -40,5 +40,9 @@ implementation : hibernate, eclipselink, openjpa, etc
 1. About Hibernate and ORM - basic
 2. CRUD operation (Create/Read/update/Delete)- Basic code snippnet to show all hibernate does all low level code -- > session.get(abc.class, id) / session.createQuery("from abc").list() , etc
 
-## L-170
+## L-170 - JDBC is backbone for Hibernate
+
+## L-172 - L177 : Setting Up Hibernate Development Environment > Istall MySQL DB - run DB users and a table , create Eclipse project, Write JDBC code to check DB.
+
+## L
 
