@@ -19,9 +19,11 @@
 
 `3. session.beginTransaction();`
 
-`4. session.save(tempStudent);`
+`4. session.save(abc instance);`
 
 `5. session.getTransaction().commit();`
+
+> ojdbc7.jar - add it externally as maven does not resolve this dependencies. check libs folder of code. 
 
 ## CRUD  Operation  - Create, Remove, Update and Delete.
 ### 1. CREATE

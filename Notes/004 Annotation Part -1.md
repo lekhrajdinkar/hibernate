@@ -33,7 +33,7 @@ By Default all feild are persistable. use @transient to skip any feild. Other 2 
 - intially Student has 2 feild - name,id. After embedding Address it will have 4 new column - line1, line2, city and zip.
 - @Embeddable Address {@col line1, @col line2, @col(name="CITY") city, @col zip}
 
-![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/0.PNG)
+![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/0.PNG)
 
 ## 8.1. @EmbeddedId
 - If we want to use Embedded object as primary Key.
@@ -41,30 +41,41 @@ By Default all feild are persistable. use @transient to skip any feild. Other 2 
 ## 8.2. @AttributeOverride
 - scenario - Student has Home addr and office addr
 
-![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/1.PNG)
+![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/1.PNG)
 
 hibernate table:
 
-![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/2.PNG)
+![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/2.PNG)
 
 ## 8.3. @ElementCollection - to map Collection
 > eg: Student has collection of Address
 > Student --> List<Address>
 
-- Address is marked as Embeddable but while puting in Student mark it as @ElementCollection, not @Embedded.
+- Address is marked as Embeddable but while puting in Student mark it as @ElementCollection, not @Embedded. This will create New TABLE to store such Collection.
 
-![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/4.PNG)
+![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/9.PNG)
+
+>Annotation usage:
+![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/4.PNG)
 
 > hibernate table: **nameofEntity_nameofCollection** auto-generated name with **nameOfEntity_EntityPK** as FK. 
 
 >Seems Like it internally created 1 to m mapping. one Student has many Address, with userId as FK.
 
-![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/5.PNG)
+![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/5.PNG)
 
 ## 8.3.1.  @JoinColumn @JoinColumn in @ElementCollection
 - modify auto-genarated table and column name --> nameofEntity_nameofCollection & nameOfEntity_EntityPK:
 
-![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/7.PNG)
+>Hibernate Table
+![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/7.PNG)
 
-![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/8.PNG)
+>annotation Usage:
+![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/8.PNG)
 
+## 8.3.2. Define PK for New table with custom name and generator - @CollectionId
+>Note : @CollectionId / @GenericGenerator is hibernate anno. hilo is hb generator.
+
+![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/10.PNG)
+
+- 
