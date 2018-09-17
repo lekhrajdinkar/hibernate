@@ -12,8 +12,9 @@ public class TestJdbc {
 		String pass = "sys";
 		
 		 user = "system";pass = "system";
+		 //user = "ng6ng6";pass = "ng6ng6";
 		
-		//jdbcUrl = "aws-rds-oracle-db-1.cvhmhffpz03y.us-east-2.rds.amazonaws.com:1521:ng6";		user="lekhrajdinkar" ; pass="June#1818" ;
+		//jdbcUrl = "aws-rds-oracle-db-1.cvhmhffpz03y.us-east-2.rds.amazonaws.com:1521:ng6";		
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
