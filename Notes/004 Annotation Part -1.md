@@ -41,5 +41,15 @@ By Default all feild are persistable. use @transient to skip any feild. Other 2 
 ## 8.2. @AttributeOverride
 - scenario - Student has Home addr and office addr
 ![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/1.PNG)
+hibernate table:
 ![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/2.PNG)
+
+## 8.3. @ElementCollection - to map Collection
+> eg: Student has collection of Address
+> Student --> List<Address>
+
+- Address is marked as Embeddable but while puting in Student mark it as @ElementCollection, not @Embedded.
+![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/4.PNG)
+hibernate table:
+![Architecture.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/5.PNG)
 
