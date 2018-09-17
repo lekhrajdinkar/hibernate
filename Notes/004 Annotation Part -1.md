@@ -40,16 +40,20 @@ By Default all feild are persistable. use @transient to skip any feild. Other 2 
 
 ## 8.2. @AttributeOverride
 - scenario - Student has Home addr and office addr
+- here trying to embedd same Entity twice in another Entity. hence need to change for one set.
+- Below kept Office addr as it and and override value for Home Addr.
 
 ![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/1.PNG)
 
-hibernate table:
+hibernate table formed with overidden column names:
 
 ![image.png](https://github.com/lekhrajdinkar/hibernate/blob/master/Notes/asset/004/2.PNG)
 
 ## 8.3. @ElementCollection - to map Collection
-> eg: Student has collection of Address
-> Student --> List<Address>
+- What if have more than 2 address > embedd Address serveral time ?
+- Another approach - to have collection of Address in Student.
+
+> Student --> has a -->  List of Address
 
 - Address is marked as Embeddable but while puting in Student mark it as @ElementCollection, not @Embedded. This will create New TABLE to store such Collection.
 
